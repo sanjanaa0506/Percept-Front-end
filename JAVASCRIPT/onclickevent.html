@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<script type="text/javascript">
+   function ss()
+	{
+		document.write("Event generated");   
+		console.log("Me chhupa hua hu!!");
+	}
+
+   function mouseOverEvent()
+   {
+   	console.log("MOuse Over");
+   }
+
+   function mouseOutEvent()
+   {
+   	console.log("Mouse Out ho gaya");
+   }
+
+
+   function KeyUp()
+   {
+   	console.log("Key in ho gaya");
+   }
+   
+   function KeyDown()
+   {
+   	console.log("Key out ho gaya");
+   }
+
+
+   function Focussed()
+   {
+   	console.log("Focuss ho gaya");
+   }
+   
+</script>
+</head>
+ 
+
+
+<body>
+<button type="button" onclick="ss()">Click ME</button>
+<p onmouseover="mouseOverEvent()" onmouseout="mouseOutEvent()">KEEP CURSOR OVER ME</p>
+
+<input id="input1" onfocus="Focussed()" onkeyup="KeyUp()">
+<input id="input1" onfocus="Focussed()" onkeydown="KeyDown()">
+
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<style type="text/css">
+	 
+#myDIV
+{
+	background-color: coral;
+	padding: 16px;
+}
+</style>
+
+<body>
+
+<div id="myDIV"> THIS IS TO EXPLAIN YOY ABOUT THE REMOVE EVENT LISTENER THE ORANGE ELEMENT HAS AN MOUSEMOVE EVENT HANDLER THAT DISPLAYS A RANDOM NUMBER WHEN YOU MOVE THE MOUSE INSIDE.
+	<p> Click Remove to remove the event handler</p>
+	<button onclick="removeHandler()">Remove</button>
+
+</div>
+<p id ="demo"></p>
+
+
+
+<script type="text/javascript">
+	const myDiv=document.getElementById("myDIV");
+	myDiv.addEventListener("mousemove",myFunction);
+
+
+	function removeHandler()
+	{
+		myDiv.removeEventListener("mousemove",myFunction);
+	}
+
+   function myFunction()
+   {
+   	document.getElementById("demo").innerHTML=Math.random();
+   }
+</script>
+</body>
+</html>
